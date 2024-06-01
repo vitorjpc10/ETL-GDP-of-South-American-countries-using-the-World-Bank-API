@@ -13,7 +13,7 @@ This project extracts GDP data for South American countries from the World Bank 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/gdp_data_pipeline.git
+    git clone https://github.com/yourusername/gdp_data_pipeline.git !Change this!!!
     cd gdp_data_pipeline
     ```
 
@@ -26,8 +26,10 @@ This project extracts GDP data for South American countries from the World Bank 
 
 4. To generate the pivoted report, access the PostgreSQL database and execute the `query.sql` script:
     ```bash
-    docker exec -it gdp_data_pipeline_db_1 psql -U user -d gdp_db -f /app/query.sql
+    docker exec -it gdp_data_pipeline_db_1 psql -U user
     ```
+5. Once inside the database you can run the SQL query (see how i can change the docker compose to include copy of sql file)
+Also change main you run and output sql query as well from file
 
 ## Assumptions and Design Decisions
 - The project uses Docker and Docker Compose for containerization and orchestration.

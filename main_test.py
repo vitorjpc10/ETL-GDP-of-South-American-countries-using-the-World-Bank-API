@@ -122,6 +122,4 @@ def load_data_to_db(data):
 
 if __name__ == "__main__":
     data = fetch_gdp_data()
-
-
     load_data_to_db(data)
