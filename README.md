@@ -14,7 +14,7 @@ This project extracts GDP data for South American countries from the World Bank 
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/gdp_data_pipeline.git !Change this!!!
-    cd gdp_data_pipeline
+    cd gdp_data_pipeline !!change this!!
     ```
 
 2. Build and run the Docker containers:
