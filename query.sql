@@ -14,4 +14,4 @@ LEFT JOIN
 GROUP BY
 	c.id, c.name, c.iso3_code
 ORDER BY
-	c.name
+	c.name;

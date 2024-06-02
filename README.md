@@ -13,8 +13,8 @@ This project extracts GDP data for South American countries from the World Bank 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/gdp_data_pipeline.git !Change this!!!
-    cd gdp_data_pipeline !!change this!!
+    git clone https://github.com/vitorjpc10/ETL-GDP-of-South-American-countries-using-the-World-Bank-API/tree/main
+    cd ETL-GDP-of-South-American-countries-using-the-World-Bank-API
     ```
 
 2. Build and run the Docker containers:
@@ -22,17 +22,18 @@ This project extracts GDP data for South American countries from the World Bank 
     docker-compose up --build
     ```
 
-3. The data will be extracted and loaded into the PostgreSQL database.
+3. The data will be extracted and loaded, based on the logic from 'main.py', into the PostgreSQL database.
 
-4. To generate the pivoted report, access the PostgreSQL database and execute the `query.sql` script:
+4. To generate the pivoted report, access the PostgreSQL database and execute the `query.sql` SQL File:
     ```bash
-    docker exec -it gdp_data_pipeline_db_1 psql -U user
+    docker exec -it etl-gdp-of-south-american-countries-using-the-world-bank-api-db-1 psql -U postgres -c "\i query.sql"
     ```
-5. Once inside the database you can run the SQL query (see how i can change the docker compose to include copy of sql file)
-Also change main you run and output sql query as well from file
 
 ## Assumptions and Design Decisions
 - The project uses Docker and Docker Compose for containerization and orchestration.
 - The PostgreSQL database is used for data storage.
 - Pure Python and SQL are used for data manipulation without the use of dataframes libraries.
 - The World Bank API is assumed to return consistent and accurate data.
+
+## Pivot Table Ouput Example:
+![img.png](img.png)
