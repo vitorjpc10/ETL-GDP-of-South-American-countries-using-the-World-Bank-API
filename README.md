@@ -40,3 +40,7 @@ This project extracts GDP data for South American countries from the World Bank 
 - The World Bank API is assumed to return consistent and accurate data. To potentially minimize the number of requests and make the process faster and more optimal, the `per_page` parameter in the API endpoint is increased.
 - The SQL query for generating the pivoted report is stored in a separate file (`query.sql`). This allows for easy modification of the query and provides a convenient way to preview the results.
 - To generate the pivoted report, the SQL query is executed within the PostgreSQL database container. This approach simplifies the process and ensures that the query can be easily run and modified as needed. Additionally, the query results are previewed in the terminal after successfully loading the data to the database for convenience.
+
+
+## Output Sample
+![img.png](img.png)
